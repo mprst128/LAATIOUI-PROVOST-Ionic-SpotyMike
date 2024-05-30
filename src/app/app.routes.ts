@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
- 
+import { authGuard } from './core/guard/auth.guard';
+
 export const routes: Routes = [
   {
     // Delete
@@ -19,10 +20,15 @@ export const routes: Routes = [
       },
     ],
   },
-
+  {
+    path: 'home',
+    // canActivate: [authGuard],
+    loadComponent: () =>
+      import('./layouts/tabs/tabs.page').then((m) => m.TabsPage),
+  },
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'auth/login',
+    redirectTo: 'home',
   },
 ];

@@ -1,11 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-
-import { HttpClient } from "@angular/common/http";
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 export const i18nProviders = importProvidersFrom(
@@ -13,7 +12,7 @@ export const i18nProviders = importProvidersFrom(
     loader: {
       provide: TranslateLoader,
       useFactory: HttpLoaderFactory,
-      deps: [HttpClient]
-    }
+      deps: [HttpClient],
+    },
   })
-)
+);

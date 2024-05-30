@@ -10,6 +10,7 @@ import {
   IonGrid,
   IonCol,
 } from '@ionic/angular/standalone';
+import { EAuthPage } from 'src/app/core/models/refData';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { LoginPage } from 'src/app/pages/login/login.page';
 
