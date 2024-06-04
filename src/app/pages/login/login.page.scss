@@ -36,6 +36,17 @@ app-login{
     .bg-transparent {
       background: transparent;
     }
+    .right{
+        float:right;
+        
+        
+    }
+
+    .link-container {
+        display: flex;
+        justify-content: flex-end;
+      }
   
   }
+  
   

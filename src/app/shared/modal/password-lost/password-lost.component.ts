@@ -1,6 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ModalController } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { ModalController, IonicModule } from '@ionic/angular';
 import {
   IonHeader,
   IonToolbar,
@@ -10,6 +10,7 @@ import {
   IonContent,
   IonInput,
   IonItem,
+  IonLabel,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -18,27 +19,40 @@ import {
   templateUrl: './password-lost.component.html',
   styleUrls: ['./password-lost.component.scss'],
   imports: [
-    IonItem,
-    IonInput,
-    IonContent,
-    IonTitle,
-    IonButton,
-    IonButtons,
-    IonToolbar,
     IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonButton,
+    IonTitle,
+    IonContent,
+    IonInput,
+    IonItem,
+    IonLabel,
+    ReactiveFormsModule,
+    IonicModule
   ],
 })
 export class PasswordLostComponent {
-  private modalCtl = inject(ModalController);
-  form: FormGroup = new FormGroup({
-    email: new FormControl('', [
-      Validators.required,
-      Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$'),
-    ]),
-  });
-
-  constructor() {}
-  async cancel() {
-    await this.modalCtl.dismiss();
+    passwordResetForm: FormGroup;
+  
+    constructor(
+      private modalController: ModalController,
+      private formBuilder: FormBuilder
+    ) {
+      this.passwordResetForm = this.formBuilder.group({
+        email: ['', [Validators.required, Validators.email]],
+      });
+    }
+  
+    dismiss() {
+      this.modalController.dismiss();
+    }
+  
+    onSubmit() {
+      if (this.passwordResetForm.valid) {
+        // Handle password reset logic here
+        console.log('Reset email:', this.passwordResetForm.value.email);
+        this.dismiss();
+      }
+    }
   }
-}

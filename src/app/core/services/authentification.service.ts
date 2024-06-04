@@ -20,6 +20,7 @@ export class AuthentificationService {
         password: password,
       })
       .pipe(catchError(this.errorRequest));
+      
   }
   register() {}
 

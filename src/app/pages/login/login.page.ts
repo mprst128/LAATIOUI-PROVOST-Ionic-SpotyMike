@@ -23,7 +23,6 @@ import {
 } from '@ionic/angular/standalone';
 import { AuthentificationService } from 'src/app/core/services/authentification.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { LoginRequestError } from 'src/app/core/interfaces/login';
 import { Router } from '@angular/router';
 import { PasswordLostComponent } from 'src/app/shared/modal/password-lost/password-lost.component';
 
@@ -52,7 +51,7 @@ export class LoginPage implements OnInit {
 
   error = '';
   submitForm = false;
-
+  private localStorage: Storage = window.localStorage;
   private modalCtl = inject(ModalController);
   private router = inject(Router);
   private serviceAuth = inject(AuthentificationService);
@@ -67,11 +66,12 @@ export class LoginPage implements OnInit {
       Validators.minLength(8),
     ]),
   });
+
   constructor() {
     addIcons({
-    'alert-circle-outline': alertOutline,
-  });
-}
+      'alert-circle-outline': alertOutline,
+    });
+  }
 
   ngOnInit() {}
 
@@ -81,21 +81,24 @@ export class LoginPage implements OnInit {
       this.submitForm = true;
       this.serviceAuth
         .login(this.form.value.email, this.form.value.password)
-        .subscribe((data: any | LoginRequestError) => {
-          if (data.error) {
-            this.error = data.message;
+        .subscribe((data: any) => {
+          if (data?.error) {
+            // this.error = data.message;
           } else {
-            // Add LocalStorage User
+            this.localStorage.setItem('user', data.user);
+            this.localStorage.setItem('token', data.token);
             this.router.navigateByUrl('/home');
           }
           console.log(data);
         });
     }
   }
-  async onPasswordLostModal() {
+
+  async onPasswordLostModal(event: Event) {
+    event.preventDefault();  
     const modal = await this.modalCtl.create({
       component: PasswordLostComponent,
     });
-    modal.present();
+    await modal.present();
   }
 }
