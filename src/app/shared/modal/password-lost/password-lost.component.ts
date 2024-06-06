@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { ModalController, IonicModule } from '@ionic/angular';
+import { Component, inject } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { TranslateModule } from '@ngx-translate/core';
+import { AuthentificationService } from 'src/app/core/services/authentification.service';
 import {
-  IonHeader,
-  IonToolbar,
-  IonButtons,
-  IonButton,
-  IonTitle,
   IonContent,
-  IonInput,
+  IonButton,
   IonItem,
-  IonLabel,
+  IonInput,
+  IonLabel
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -18,41 +17,31 @@ import {
   selector: 'app-password-lost',
   templateUrl: './password-lost.component.html',
   styleUrls: ['./password-lost.component.scss'],
-  imports: [
-    IonHeader,
-    IonToolbar,
-    IonButtons,
-    IonButton,
-    IonTitle,
-    IonContent,
-    IonInput,
-    IonItem,
-    IonLabel,
-    ReactiveFormsModule,
-    IonicModule
-  ],
+  imports: [IonLabel, IonItem, IonInput, IonContent, IonButton, TranslateModule],
 })
 export class PasswordLostComponent {
-    passwordResetForm: FormGroup;
-  
-    constructor(
-      private modalController: ModalController,
-      private formBuilder: FormBuilder
-    ) {
-      this.passwordResetForm = this.formBuilder.group({
-        email: ['', [Validators.required, Validators.email]],
-      });
-    }
-  
-    dismiss() {
-      this.modalController.dismiss();
-    }
-  
-    onSubmit() {
-      if (this.passwordResetForm.valid) {
-        // Handle password reset logic here
-        console.log('Reset email:', this.passwordResetForm.value.email);
-        this.dismiss();
-      }
+  private router = inject(Router);
+  private authService = inject(AuthentificationService);
+  private modalController = inject(ModalController);
+
+  form = new FormGroup({
+    email: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'),
+    ]),
+  });
+
+  async onCancel() {
+    await this.modalController.dismiss();
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      // REDIRECT TO HOME PAGE AFTER
+      console.log('Form Submitted', this.form.value);
+      this.router.navigate(['/home']);
+    } else {
+      console.error('Form is invalid');
     }
   }
+}
