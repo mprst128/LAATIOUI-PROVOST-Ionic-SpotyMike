@@ -1,46 +1,18 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-    background-color: #1DB954;
-  }
-  
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .search-icon {
-    font-size: 24px;
-    color: white;
-  }
-  
-  .main-content {
-    padding: 16px;
-  }
-  
-  .new-album {
-    display: flex;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 16px;
-  }
-  
-  .album-cover {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .album-info {
-    padding: 16px;
-  }
-  
-  .music-genres, .top-songs, .last-played {
-    margin-bottom: 16px;
-  }
-  
-  ion-button {
-    margin-right: 8px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+ 
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.search-icon {
+  font-size: 24px;
+  color: black; /* Black color for the search icon */
+}
