@@ -35,3 +35,28 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+/* Global CSS */
+.start {
+  text-align: start;
+}
+.center {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+.pad-25 {
+  padding-top: 25%;
+}
+.pad-35 {
+  padding-top: 35%;
+}
+.pad-50 {
+  padding-top: 50%;
+}
+.error {
+  color: red;
+  font-size: 0.75rem;
+}

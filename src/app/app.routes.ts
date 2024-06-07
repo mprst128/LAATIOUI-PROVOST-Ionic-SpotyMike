@@ -1,6 +1,8 @@
-import { Routes } from '@angular/router';
-import { authGuard } from './core/guard/auth.guard';
 
+import { Routes } from '@angular/router';
+import { tabroutes } from './layouts/tabs/tabs.routes';
+ 
+ 
 export const routes: Routes = [
   {
     // Delete
@@ -20,15 +22,18 @@ export const routes: Routes = [
       },
     ],
   },
+  ...tabroutes,
   {
-    path: 'home',
-    // canActivate: [authGuard],
-    loadComponent: () =>
-      import('./layouts/tabs/tabs.page').then((m) => m.TabsPage),
+    path: 'profile',
+    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
   },
+ 
+  ...tabroutes,
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'home',
+    path: 'profile',
+    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
   },
+ 
+ 
+ 
 ];
