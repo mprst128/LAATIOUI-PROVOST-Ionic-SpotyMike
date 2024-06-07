@@ -1,7 +1,12 @@
 {
+<<<<<<< HEAD
   "name": "Clean-SpotyMike",
   "integrations": {
     "capacitor": {}
   },
+=======
+  "name": "ionic-apbase",
+  "integrations": {},
+>>>>>>> 108c280 (first commit)
   "type": "angular-standalone"
 }

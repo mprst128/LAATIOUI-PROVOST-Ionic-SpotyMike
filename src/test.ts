@@ -11,4 +11,8 @@ import {
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting(),
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> 108c280 (first commit)
