@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';  // Import CUSTOM_ELEMENTS_SCHEMA
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NewAlbumComponent } from 'src/app/shared/card-album/card.component'; 
 
 @Component({
   selector: 'app-home-home',
@@ -10,9 +11,10 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';  // Import CUSTOM_ELEMEN
   standalone: true,
   imports: [
     IonicModule,
-    
+    CommonModule,
+    NewAlbumComponent, 
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]  // Use CUSTOM_ELEMENTS_SCHEMA here
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePage {
   elementTitles: string[];

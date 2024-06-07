@@ -1,51 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Home</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
+<div class="header">
+  <img src="assets/icon/logo.jpg" alt="Spotify Logo" class="logo">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M23.384 20.616l-5.891-5.891a9.674 9.674 0 0 0 2.307-6.226C19.8 3.973 15.828 0 11.4 0 6.972 0 3 3.973 3 8.499S6.972 17 11.4 17c2.358 0 4.51-.872 6.226-2.307l5.891 5.891a1.068 1.068 0 0 0 1.514 0 1.068 1.068 0 0 0 0-1.514zM11.4 14.4a5.899 5.899 0 1 1 0-11.799A5.899 5.899 0 0 1 17.3 8.499a5.899 5.899 0 0 1-5.9 5.901z"/>
+  </svg>
+</div>
 
-<ion-content>
-  <div class="header">
-    <ion-img src="assets/logo.png" class="logo"></ion-img>
-    <ion-icon name="search-outline" class="search-icon"></ion-icon>
-  </div>
 
-  <div class="main-content">
-    <!-- New Album Section -->
-    <div class="new-album">
-      <img src="assets/new-album.png" class="album-cover">
-      <div class="album-info">
-        <h2>New Album</h2>
-        <h3>R & B Hits</h3>
-        <p>Discover 87 songs!</p>
-      </div>
-    </div>
-    <!-- Music Genres Section -->
-    <div class="music-genres">
-      <h3>Music Genres</h3>
-      <ion-button>All</ion-button>
-      <ion-button>R&B</ion-button>
-      <ion-button>Pop</ion-button>
-      <ion-button>Rock</ion-button>
-    </div>
-    <!-- Top Songs Section -->
-    <div class="top-songs">
-      <h3>Top Songs</h3>
-      <!-- Song cards will go here -->
-    </div>
-    <!-- Last Played Section -->
-    <div class="last-played">
-      <h3>Last Played</h3>
-      <!-- Last played songs will go here -->
-    </div>
-  </div>
+
+  <app-new-album></app-new-album>
+ 
 </ion-content>
-
-  <app-see-all [elementTitle] = "elementTitles[0]"></app-see-all>
-  <app-round-menu [nbrElement]="4" [elementArray]="musiccateg"></app-round-menu>
-  <app-see-all [elementTitle] = "elementTitles[1]"></app-see-all>
-  <app-vertical-card [songs] = "songs"></app-vertical-card>
-  <app-see-all [elementTitle] = "elementTitles[2]"></app-see-all>
-  <app-horizontal1-card [lastPlayeds] = "songs"></app-horizontal1-card>
-  <app-see-all [elementTitle] = "elementTitles[3]"></app-see-all>
-  <app-vertical-card [albums] = "albums"></app-vertical-card>
