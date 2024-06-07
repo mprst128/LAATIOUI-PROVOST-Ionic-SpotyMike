@@ -20,10 +20,6 @@ import {
 } from '@ionic/angular/standalone';
 import { AuthentificationService } from 'src/app/core/services/authentification.service';
 import { TranslateModule } from '@ngx-translate/core';
-import {
-  LoginRequestError,
-  LoginRequestSucess,
-} from 'src/app/core/interfaces/login';
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { PasswordLostComponent } from 'src/app/shared/modal/password-lost/password-lost.component';
@@ -53,8 +49,7 @@ import { LocalStorageService } from 'src/app/core/services/local-storage.service
 export class LoginPage {
   error = '';
   submitForm = false;
-
-  private router = inject(Router);
+  private localStorage: Storage = window.localStorage;
   private modalCtl = inject(ModalController);
   private localStore = inject(LocalStorageService);
   private serviceAuth = inject(AuthentificationService);
@@ -69,7 +64,15 @@ export class LoginPage {
       Validators.minLength(8),
     ]),
   });
-  constructor() {}
+
+  constructor() {
+    addIcons({
+      'alert-circle-outline': alertOutline,
+    });
+  }
+
+  ngOnInit() {}
+
   onSubmit() {
     this.error = '';
     if (this.form.valid) {
@@ -78,10 +81,10 @@ export class LoginPage {
         .login(this.form.value.email, this.form.value.password)
         .subscribe((data: any) => {
           if (data?.error) {
-            // this.error = data?.message ?? '';
+            // this.error = data.message;
           } else {
-            this.localStore.setItem('user', data.user);
-            this.localStore.setItem('token', data.tokens);
+            this.localStorage.setItem('user', data.user);
+            this.localStorage.setItem('token', data.token);
             this.router.navigateByUrl('/home');
           }
           console.log(data);
@@ -89,10 +92,11 @@ export class LoginPage {
     }
   }
 
-  async onPasswordLostModal() {
+  async onPasswordLostModal(event: Event) {
+    event.preventDefault();  
     const modal = await this.modalCtl.create({
       component: PasswordLostComponent,
     });
-    modal.present();
+    await modal.present();
   }
 }

@@ -28,6 +28,11 @@ export const routes: Routes = [
           import('../../pages/tab3/tab3.page').then((m) => m.Tab3Page),
       },
       {
+        path: 'profile',
+        loadComponent: () =>
+          import('../../pages/profile/profile.page').then((m) => m.ProfilePage),
+      },
+      {
         path: '',
         redirectTo: '/home/home',
         pathMatch: 'full',

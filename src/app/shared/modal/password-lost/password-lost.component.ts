@@ -1,15 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
+import { TranslateModule } from '@ngx-translate/core';
+import { AuthentificationService } from 'src/app/core/services/authentification.service';
 import {
-  IonHeader,
-  IonToolbar,
-  IonButtons,
-  IonButton,
-  IonTitle,
   IonContent,
-  IonInput,
+  IonButton,
   IonItem,
+  IonInput,
+  IonLabel
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -17,28 +17,31 @@ import {
   selector: 'app-password-lost',
   templateUrl: './password-lost.component.html',
   styleUrls: ['./password-lost.component.scss'],
-  imports: [
-    IonItem,
-    IonInput,
-    IonContent,
-    IonTitle,
-    IonButton,
-    IonButtons,
-    IonToolbar,
-    IonHeader,
-  ],
+  imports: [IonLabel, IonItem, IonInput, IonContent, IonButton, TranslateModule],
 })
 export class PasswordLostComponent {
-  private modalCtl = inject(ModalController);
-  form: FormGroup = new FormGroup({
+  private router = inject(Router);
+  private authService = inject(AuthentificationService);
+  private modalController = inject(ModalController);
+
+  form = new FormGroup({
     email: new FormControl('', [
       Validators.required,
-      Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$'),
+      Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'),
     ]),
   });
 
-  constructor() {}
-  async cancel() {
-    await this.modalCtl.dismiss();
+  async onCancel() {
+    await this.modalController.dismiss();
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      // REDIRECT TO HOME PAGE AFTER
+      console.log('Form Submitted', this.form.value);
+      this.router.navigate(['/home']);
+    } else {
+      console.error('Form is invalid');
+    }
   }
 }

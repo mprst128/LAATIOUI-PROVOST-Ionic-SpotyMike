@@ -2,41 +2,34 @@
   <ion-list class="bg-transparent">
     <ion-item>
       <ion-input type="email" formControlName="email" name="email" label="Email" labelPlacement="floating"
-        placeholder="mike@mike.mike"></ion-input>
+        placeholder="exemple@exemple.com" fill="outline"></ion-input>
     </ion-item>
-    @if(form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)){
-    <div>
-      @if(form.get('email')?.errors?.['required'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>{{ 'auth.email_require'|translate }}</p>
-      }
-      @else if(form.get('email')?.errors?.['pattern'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>{{ 'auth.email_format'|translate }}</p>
-      }
+    <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">
+      <div>
+        <p class="error" *ngIf="form.get('email')?.errors?.['required']">{{ 'auth.email_required' | translate }}</p>
+        <p class="error" *ngIf="form.get('email')?.errors?.['pattern']">{{ 'auth.email_format' | translate }}</p>
+      </div>
     </div>
-    }
     <ion-item>
       <ion-input type="password" formControlName="password" name="password" label="Password" labelPlacement="floating"
-        placeholder="••••••••••••••"></ion-input>
+        placeholder="••••••••••••••" fill="outline"></ion-input>
     </ion-item>
-    @if(form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)){
-    <div>
-      @if(form.get('password')?.errors?.['required'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>Password require</p>
-      }
-      @else if(form.get('password')?.errors?.['pattern'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>Format password invalid</p>
-      }
-      @else if(form.get('password')?.errors?.['minlength'] ){
-      <p class="error"><ion-icon name="alert-outline"></ion-icon>Size password invalid</p>
-      }
+    <div *ngIf="form.get('password')?.invalid && (form.get('password')?.dirty || form.get('password')?.touched)">
+      <div>
+        <p class="error" *ngIf="form.get('password')?.errors?.['required']">Password require</p>
+        <p class="error" *ngIf="form.get('password')?.errors?.['pattern']">Format password invalid</p>
+        <p class="error" *ngIf="form.get('password')?.errors?.['minlength']">Size password invalid</p>
+      </div>
     </div>
-    }
   </ion-list>
+  <div class="link-container">
+    <a href="#" class="right" (click)="onPasswordLostModal($event)">mot de passe oublié ?</a>
+  </div>
   <br>
-  @if(error){
-  <p class="error"><ion-icon name="alert-outline"></ion-icon>{{ error }}</p>
-  }
+  <div *ngIf="error">
+    <p class="error">{{ error }}</p>
+  </div>
   <br>
   <ion-button type="submit" [disabled]="!form.valid && !submitForm">Se Connecter</ion-button>
-  <a (click)="onPasswordLostModal()">Pas encore inscrit ?</a>
+  <a href="#">Pas encore inscrit ?</a>
 </form>
