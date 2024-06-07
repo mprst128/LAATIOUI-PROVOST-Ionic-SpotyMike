@@ -1,0 +1,85 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7%;
+  
+    #title{
+      font-size: 16px;
+      color: black;
+      font-family: 'Manrope', sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.01em;
+      font-style: normal;
+    }
+    .iconHeader {
+      font-size: 6vw;
+      color: black;
+    }
+  }
+
+  .padding-title {
+    padding-top: 15%;
+    padding-bottom: 10%;
+}
+
+.padding-top {
+    padding-top: 3%;
+}
+
+.buttons-likeandshare {
+    position: absolute;
+    padding-left: 65%;
+    padding-top: 18%;
+}
+
+.ellipsis {
+    position: absolute;
+    padding-left: 82%;
+    transform: rotate(90deg) translateY(-160px) translateX(-155px);
+}
+
+.btn1 {
+    margin: 0;
+}
+
+.btn2 {
+    margin: 0;
+}
+
+.reformat-like {
+    padding-right: 10%;
+}
+
+.reformat-share {
+    padding-right: 10%;
+}
+
+.reformat-cover {
+    position: absolute;
+    padding-left: 10%;
+    width: 40%;
+}
+
+.padding-text {
+    padding-left: 45%;
+    padding-bottom: 20%;
+}
+
+.playlist-text {
+    margin: 0%;
+    font-size: 110%;
+}
+
+.auteur-text {
+    margin: 0%;
+    padding-top: 5%;
+    padding-left: 1%;
+    font-size: 90%;
+}
+
+.line {
+    padding-top: 3%;
+    width: 100%;
+    border-bottom: 1px solid #EBEBEB;
+}

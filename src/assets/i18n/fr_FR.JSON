@@ -4,6 +4,26 @@
       "email_required": "L'email est obligatoire",
       "email_format": "Le format du mail est invalide",
       "password_required": "Le mot de passe est obligatoire",
-      "password_minSize": "Le mot de passe doit contenir au moins 8 caractères"
+      "password_minSize": "Le mot de passe doit contenir au moins 8 caractères",
+      "login": {
+        "email": "Email",
+        "password": "Mot de passe",
+        "reset_password": "Réinitialiser le mot de passe",
+        "login": "Connexion",
+        "not_registered": "Vous n'avez pas de compte ? S'inscrire"
+      },
+      "register":{
+        "email": "Email *",
+        "password": "Mot de passe *",
+        "first_name": "Prénom *",
+        "last_name": "Nom *",
+        "birth_date": "Date de Naissance *",
+        "phone_number": "Numéro de Téléphone",
+        "register": "S'inscrire",
+        "already_registered": "Vous avez déjà un compte ? Se connecter"
     }
+  },
+  "home": {
+    "See all" : "Voir plus"
   }
+}

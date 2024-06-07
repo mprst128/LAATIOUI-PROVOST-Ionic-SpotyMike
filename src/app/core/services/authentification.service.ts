@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { LoginRequestError, LoginRequestSucess } from '../interfaces/login';
+import { LoginRequestError, LoginRequestSuccess} from '../interfaces/login';
 
 @Injectable({
   providedIn: 'root',

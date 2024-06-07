@@ -1,6 +1,6 @@
 
 import { Routes } from '@angular/router';
-import { tabroutes } from './layouts/tabs/tabs.routes';
+//import { tabroutes } from './layouts/tabs/tabs.routes';
  
  
 export const routes: Routes = [
@@ -22,13 +22,13 @@ export const routes: Routes = [
       },
     ],
   },
-  ...tabroutes,
+  //...tabroutes,
   {
     path: 'profile',
     loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
   },
  
-  ...tabroutes,
+  //...tabroutes,
   {
     path: 'profile',
     loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)

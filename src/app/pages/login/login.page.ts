@@ -65,11 +65,11 @@ export class LoginPage {
     ]),
   });
 
-  constructor() {
+  /*constructor() {
     addIcons({
       'alert-circle-outline': alertOutline,
     });
-  }
+  }*/
 
   ngOnInit() {}
 
@@ -85,7 +85,7 @@ export class LoginPage {
           } else {
             this.localStorage.setItem('user', data.user);
             this.localStorage.setItem('token', data.token);
-            this.router.navigateByUrl('/home');
+            //this.router.navigateByUrl('/home');
           }
           console.log(data);
         });

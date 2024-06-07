@@ -1,9 +1,122 @@
-<app-general-header  [endIcon] ="end_icon" [title] ="title" ></app-general-header>
+<ion-content [fullscreen]="true">
+  <ion-row class="container">
+    <ion-icon (click)="backClicked()" class="iconHeader" name="chevronRetour"></ion-icon>
+    <p id="title">Music Playlist</p>
+    <ion-icon class="iconHeader" name="ellipsis-horizontal"></ion-icon>
+  </ion-row>
+<div>
+  <div class="padding-container">
+      <div>
+        <ion-row>
+          <img class="reformat-cover" src="assets/icon/Playlist/ppWorkInstrumental.png" alt="Cover Work instrument">
+          <div class="padding-text">
+            <p class="bold playlist-text">Work Instrument</p>
+            <p class="light auteur-text">Nama User</p>
+          </div>
+            <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
+            <ion-col class="buttons-likeandshare">
+              <a class="btn-like" color="transparent" href="">
+                <img class="reformat-like" src="assets/icon/likeSomething.svg">
+              </a>
+              <a class="btn-share" color="transparent" href="">
+                <img class="reformat-share" src="assets/icon/shareSomething.svg">
+              </a>
+            </ion-col>
+          <div class="line"></div>
+        </ion-row>
+      </div>
+  </div>
+</div>
 
-<ion-content  class="ion-padding">
-  <ion-item>
-    <ion-label>Total : {{ playlists ? playlists.length : 0 }}</ion-label>
-  </ion-item>
-  <app-horizontal2-card [playlists] = "playlists"></app-horizontal2-card>
-  
+<div class="padding-top">
+  <div class="padding-container">
+    <div>
+      <ion-row>
+        <img class="reformat-cover" src="assets/icon/Playlist/ppChillVibes.png" alt="Cover Chill Vibes">
+        <div class="padding-text">
+          <p class="bold playlist-text">Chill Vibes</p>
+          <p class="light auteur-text">Randy Stanton</p>
+        </div>
+          <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
+          <ion-col class="buttons-likeandshare">
+            <a class="btn-like" color="transparent" href="">
+              <img class="reformat-like" src="assets/icon/likeSomething.svg">
+            </a>
+            <a class="btn-share" color="transparent" href="">
+              <img class="reformat-share" src="assets/icon/shareSomething.svg">
+            </a>
+          </ion-col>
+        <div class="line"></div>
+      </ion-row>
+    </div>
+</div>
+
+<div class="padding-top">
+  <div class="padding-container">
+    <div>
+      <ion-row>
+        <img class="reformat-cover" src="assets/icon/Playlist/ppDancePartyHits.png" alt="Cover Dance Party Hits">
+        <div class="padding-text">
+          <p class="bold playlist-text">Dance Party Hits</p>
+          <p class="light auteur-text">Jaydon Curtis</p>
+        </div>
+          <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
+          <ion-col class="buttons-likeandshare">
+            <a class="btn-like" color="transparent" href="">
+              <img class="reformat-like" src="assets/icon/likeSomething.svg">
+            </a>
+            <a class="btn-share" color="transparent" href="">
+              <img class="reformat-share" src="assets/icon/shareSomething.svg">
+            </a>
+          </ion-col>
+        <div class="line"></div>
+      </ion-row>
+    </div>
+</div>
+
+<div class="padding-top">
+  <div class="padding-container">
+    <div>
+      <ion-row>
+        <img class="reformat-cover" src="assets/icon/Playlist/ppSummerBreezes1.png" alt="Cover Summer Breezes 1">
+        <div class="padding-text">
+          <p class="bold playlist-text">Summer Breezes</p>
+          <p class="light auteur-text">Angel Herwitz</p>
+        </div>
+          <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
+          <ion-col class="buttons-likeandshare">
+            <a class="btn-like" color="transparent" href="">
+              <img class="reformat-like" src="assets/icon/likeSomething.svg">
+            </a>
+            <a class="btn-share" color="transparent" href="">
+              <img class="reformat-share" src="assets/icon/shareSomething.svg">
+            </a>
+          </ion-col>
+        <div class="line"></div>
+      </ion-row>
+    </div>
+</div>
+
+<div class="padding-top">
+  <div class="padding-container">
+    <div>
+      <ion-row>
+        <img class="reformat-cover" src="assets/icon/Playlist/ppSummerBreezes2.png" alt="Cover Summer Breezes 2">
+        <div class="padding-text">
+          <p class="bold playlist-text">Summer Breezes</p>
+          <p class="light auteur-text">Angel Herwitz</p>
+        </div>
+          <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
+          <ion-col class="buttons-likeandshare">
+            <a class="btn-like" color="transparent" href="">
+              <img class="reformat-like" src="assets/icon/likeSomething.svg">
+            </a>
+            <a class="btn-share" color="transparent" href="">
+              <img class="reformat-share" src="assets/icon/shareSomething.svg">
+            </a>
+          </ion-col>
+        <div class="line"></div>
+      </ion-row>
+    </div>
+</div>
 </ion-content>
