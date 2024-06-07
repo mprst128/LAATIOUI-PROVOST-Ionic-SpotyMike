@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';  // Import CUSTOM_ELEMENTS_SCHEMA
+
 
 @Component({
   selector: 'app-home-home',
@@ -9,11 +9,21 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   styleUrls: ['home.page.scss'],
   standalone: true,
   imports: [
-    CommonModule,
     IonicModule,
-    ExploreContainerComponent,
+    
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]  // Use CUSTOM_ELEMENTS_SCHEMA here
 })
 export class HomePage {
-  constructor() {}
+  elementTitles: string[];
+  musiccateg: any[];
+  songs: any[];
+  albums: any[];
+
+  constructor() {
+    this.elementTitles = ['Title 1', 'Title 2', 'Title 3', 'Title 4'];
+    this.musiccateg = [{ name: 'Category 1' }, { name: 'Category 2' }];
+    this.songs = [{ name: 'Song 1' }, { name: 'Song 2' }];
+    this.albums = [{ name: 'Album 1' }, { name: 'Album 2' }];
+  }
 }

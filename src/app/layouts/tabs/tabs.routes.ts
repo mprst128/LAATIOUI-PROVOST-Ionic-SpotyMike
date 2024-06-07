@@ -16,11 +16,7 @@ export const tabroutes: Routes = [
         loadComponent: () =>
           import('../../pages/tab2/tab2.page').then((m) => m.Tab2Page),
       },
-      {
-        path: 'playlist',
-        loadComponent: () =>
-          import('../../pages/playlist/playlist.page').then((m) => m.PlaylistPage),
-      },
+      
       {
         path: 'profile',
         loadComponent: () =>
