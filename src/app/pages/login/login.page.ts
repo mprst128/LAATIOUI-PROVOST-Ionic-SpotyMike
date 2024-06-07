@@ -1,5 +1,8 @@
+import { alertOutline } from 'ionicons/icons';
+import { addIcons } from 'ionicons';
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ModalController } from '@ionic/angular';
 import {
   FormControl,
   FormGroup,
@@ -21,10 +24,8 @@ import {
 import { AuthentificationService } from 'src/app/core/services/authentification.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
 import { PasswordLostComponent } from 'src/app/shared/modal/password-lost/password-lost.component';
-import { LocalStorageService } from 'src/app/core/services/local-storage.service';
-
+ 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -46,14 +47,15 @@ import { LocalStorageService } from 'src/app/core/services/local-storage.service
     ReactiveFormsModule,
   ],
 })
-export class LoginPage {
+export class LoginPage implements OnInit {
+ 
   error = '';
   submitForm = false;
   private localStorage: Storage = window.localStorage;
   private modalCtl = inject(ModalController);
-  private localStore = inject(LocalStorageService);
+  private router = inject(Router);
   private serviceAuth = inject(AuthentificationService);
-
+ 
   form: FormGroup = new FormGroup({
     email: new FormControl('', [
       Validators.required,
@@ -64,15 +66,15 @@ export class LoginPage {
       Validators.minLength(8),
     ]),
   });
-
-  /*constructor() {
+ 
+  constructor() {
     addIcons({
       'alert-circle-outline': alertOutline,
     });
-  }*/
-
+  }
+ 
   ngOnInit() {}
-
+ 
   onSubmit() {
     this.error = '';
     if (this.form.valid) {
@@ -85,13 +87,13 @@ export class LoginPage {
           } else {
             this.localStorage.setItem('user', data.user);
             this.localStorage.setItem('token', data.token);
-            //this.router.navigateByUrl('/home');
+            this.router.navigateByUrl('/home');
           }
           console.log(data);
         });
     }
   }
-
+ 
   async onPasswordLostModal(event: Event) {
     event.preventDefault();  
     const modal = await this.modalCtl.create({

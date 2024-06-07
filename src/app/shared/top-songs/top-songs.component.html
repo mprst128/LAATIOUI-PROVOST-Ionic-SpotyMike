@@ -1,0 +1,15 @@
+<div class="top-songs">
+  <div class="header">
+    <h2>Top Songs</h2>
+    <a href="#">See All</a>
+  </div>
+  <div class="songs">
+    <div class="song" *ngFor="let song of songs">
+      <img [src]="song.image" alt="{{ song.name }}">
+      <div class="song-info">
+        <p>{{ song.name }}</p>
+        <p>{{ song.album }}</p>
+      </div>
+    </div>
+  </div>
+</div>

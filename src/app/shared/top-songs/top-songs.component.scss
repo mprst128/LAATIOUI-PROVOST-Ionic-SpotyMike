@@ -1,0 +1,56 @@
+.top-songs {
+    text-align: center;
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      margin-top: 36px;
+  
+      h2 {
+        font-size: 1.25rem;
+        margin: 0;
+        margin-left: 20px;
+      }
+  
+      a {
+        font-size: 1rem;
+        color: #15AB90;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+    }
+  
+    .songs {
+        display: flex;
+        justify-content: center; 
+        gap: 6px;
+  
+      .song {
+        text-align: center;
+  
+        img {
+          border-radius: 8px;
+          width: 100px;
+          height: 100px;
+          margin-bottom: 8px;
+        }
+  
+        .song-info {
+          p {
+            margin: 4px 0;
+  
+            &:first-child {
+              font-weight: bold;
+            }
+  
+            &:last-child {
+              color: #888;
+            }
+          }
+        }
+      }
+    }
+  }
+  

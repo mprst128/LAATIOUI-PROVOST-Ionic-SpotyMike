@@ -12,9 +12,9 @@ export const tabroutes: Routes = [
           import('../../pages/home/home.page').then((m) => m.HomePage),
       },
       {
-        path: 'tab2',
+        path: 'favorites',
         loadComponent: () =>
-          import('../../pages/tab2/tab2.page').then((m) => m.Tab2Page),
+          import('../../pages/favorites/favorites.page').then((m) => m.FavoritesPage),
       },
 
       {

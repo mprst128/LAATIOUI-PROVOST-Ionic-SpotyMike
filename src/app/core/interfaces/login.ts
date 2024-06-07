@@ -6,10 +6,11 @@ export interface LoginRequestError {
   message: string;
 }
 
+
 export interface LoginRequestSuccess {
   code?: number;
   error: boolean;
-  message: string;
-  user : IUser;
-  token : IToken;
+  user: any;
+  token : any;
+  
 }

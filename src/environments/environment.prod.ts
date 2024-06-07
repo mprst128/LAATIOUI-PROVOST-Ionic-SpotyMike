@@ -1,13 +1,12 @@
 export const environment = {
   production: true,
   url_api: 'http://esiea-spotymike.eu-4.evennode.com',
-  firebase : {
-    apiKey: "AIzaSyAuM-HDZ9Xk23Z6ra87USG9R5kqkM0Gj94",
-    authDomain: "spotymike-2961a.firebaseapp.com",
-    projectId: "spotymike-2961a",
-    storageBucket: "spotymike-2961a.appspot.com",
-    messagingSenderId: "72006215134",
-    appId: "1:72006215134:web:53c7adf4807def868da94f",
-    measurementId: "G-SB6ZXK6GGJ"
+  firebase:{
+    apiKey: "AIzaSyABQzICfarfuHyL8O0sKpcwf0tHZMPtHYc",
+    authDomain: "ionic-7f6c2.firebaseapp.com",
+    projectId: "ionic-7f6c2",
+    storageBucket: "ionic-7f6c2.appspot.com",
+    messagingSenderId: "343661246620",
+    appId: "1:343661246620:web:06808ff4b241c862a7d559"
   }
 };

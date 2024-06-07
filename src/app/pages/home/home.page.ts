@@ -3,6 +3,9 @@ import { IonicModule } from '@ionic/angular';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NewAlbumComponent } from 'src/app/shared/card-album/card.component'; 
+import { CategoryComponent } from 'src/app/shared/category/category.component'; 
+import { TopSongsComponent } from 'src/app/shared/top-songs/top-songs.component'; 
+import { LastPlayedComponent } from 'src/app/shared/last-played/last-played.component'; 
 
 @Component({
   selector: 'app-home-home',
@@ -13,6 +16,9 @@ import { NewAlbumComponent } from 'src/app/shared/card-album/card.component';
     IonicModule,
     CommonModule,
     NewAlbumComponent, 
+    CategoryComponent,
+    TopSongsComponent,
+    LastPlayedComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-interface ICache {
-  [key: string]: BehaviorSubject<any>;
-}
+interface ICache { [ key: string ]: BehaviorSubject<any>; }
 type serializable = object | Object;
 
 @Injectable()

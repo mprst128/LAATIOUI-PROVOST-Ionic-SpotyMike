@@ -1,0 +1,50 @@
+.categories {
+    text-align: center; 
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      margin-top: 36px;
+
+  
+      h2 {
+        font-size: 1.25rem;
+        margin: 0;
+        margin-left: 20px;
+      }
+  
+      a {
+        font-size: 1rem;
+        color: #15AB90;
+        margin-right: 20px;
+        text-decoration: none;
+      }
+    }
+  
+    .buttons {
+      display: flex;
+      justify-content: center; 
+      gap: 16px;
+   
+  
+      button {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: #333;
+        transition: background-color 0.3s, color 0.3s;
+  
+        &.active {
+          background-color: #15AB90;
+          color: #fff;
+          border-color: #15AB90;
+        }
+      }
+    }
+  }
+  
