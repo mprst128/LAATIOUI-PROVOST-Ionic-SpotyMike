@@ -1,0 +1,138 @@
+ion-content {
+    --background: rgb(83, 113, 105);
+    --background: linear-gradient(180deg, rgba(83, 113, 105, 1) 0%, rgba(255, 255, 255, 1) 50%);
+    background-attachment: fixed;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7%;
+  
+    #title{
+      font-size: 16px;
+      color: white;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 100;
+      letter-spacing: 0.01em;
+      font-style: normal;
+    }
+    .iconHeader {
+      font-size: 6vw;
+      color: white;
+    }
+  }
+  
+  .pp-musique{
+    display: flex;
+    justify-content: center;
+  
+    img{
+      width: 90%;
+      height: 327px;
+      border-radius: 29px;
+    }
+  }
+  
+  .info-like{
+    .info-song {
+        padding-left: 5%;
+  
+        .name-song {
+          font-weight: bold;
+          font-size: 20px;
+          margin-bottom: 5%;
+        }
+  
+        .name-artist {
+          font-size: 18px;
+          font-weight: 200;
+          margin: 0;
+          color: #404040;
+        }
+      }
+
+    .buttons-likeandshare {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 5%;
+      img{
+        margin-top: 20px;
+        width: 25%;
+      }
+  
+      .reformat-like {
+        padding-right: 5%;
+      }
+  
+      .reformat-share {
+        padding-right: 5%;
+      }
+    }
+  }
+  
+  ion-range {
+    --bar-background: #E5E9ED;
+    --bar-background-active: #15AB90;
+    --bar-border-radius: 200px;
+    --knob-background: white;
+    --bar-height: 6px;
+    --knob-size: 15px;
+    --knob-border-radius: 50%;
+    --knob-box-shadow: 0px 0px 0px 5px #15AB90;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .timer-label{
+    display: flex;
+    justify-content: space-between;
+  
+    ion-label{
+      font-size: 12px;
+      font-weight: 300;
+      color: #737373;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+  
+  .buttons-music{
+    justify-content: space-evenly;
+  
+    ion-button{
+      --box-shadow: 0;
+    }
+  }
+  
+  .section-lyrics{
+    background-color: #F5F5F5;
+    margin: 5%;
+    border-radius: 26px;
+  
+    .header-lyrics{
+      display: flex;
+      justify-content: space-between;
+  
+      .title-lyrics {
+          font-size: 16px;
+          font-weight: bold;
+          padding-left: 5%;
+        }
+  
+        ion-button {
+          --box-shadow: 0;
+        }
+    }
+  
+    .lyrics{
+      .content-lyrics{
+        margin: 0;
+        font-size: 18px;
+        color: #737373;
+        padding: 0% 5% 5% 5%;
+      }
+    }
+  
+  }

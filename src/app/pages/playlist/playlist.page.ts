@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonRow, IonCol, IonIcon, I
 import { Location } from '@angular/common';
 import { addIcons } from 'ionicons';
 import { chevronBack, ellipsisHorizontal } from 'ionicons/icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-playlist',
@@ -15,8 +16,11 @@ import { chevronBack, ellipsisHorizontal } from 'ionicons/icons';
 })
 export class PlaylistPage implements OnInit {
 
-  constructor(private _location: Location) {
+  constructor(private _location: Location, private router: Router) {
     addIcons({ chevronBack, ellipsisHorizontal })
+    /*redirection(){
+        this.router.redirection(['/home/playerSong.page'])
+      }*/
   }
 
   ngOnInit() {
