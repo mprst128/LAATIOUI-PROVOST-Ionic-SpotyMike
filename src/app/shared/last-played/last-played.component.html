@@ -1,0 +1,20 @@
+<div class="last-played">
+    <div class="header">
+      <h2>Last Played</h2>
+      <a href="#">See All</a>
+    </div>
+    <div class="songs">
+      <div class="song" *ngFor="let song of lastPlayedSongs">
+        <img [src]="song.image" alt="{{ song.name }}">
+        <div class="song-info">
+          <p class="song-name">{{ song.name }}</p>
+          <p class="song-artist">{{ song.artist }}</p>
+        </div>
+        <div class="song-duration">
+          <p>{{ song.duration }}</p>
+        </div>
+        <img src="assets/icon/partager.png" alt="partager" class="dots">
+      </div>
+    </div>
+  </div>
+  

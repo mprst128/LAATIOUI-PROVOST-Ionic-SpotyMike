@@ -9,15 +9,14 @@ import {
   IonButton,
   IonItem,
   IonInput,
-  IonLabel
-} from '@ionic/angular/standalone';
+  IonLabel, IonHeader, IonToolbar } from '@ionic/angular/standalone';
 
 @Component({
   standalone: true,
   selector: 'app-password-lost',
   templateUrl: './password-lost.component.html',
   styleUrls: ['./password-lost.component.scss'],
-  imports: [IonLabel, IonItem, IonInput, IonContent, IonButton, TranslateModule],
+  imports: [IonToolbar, IonHeader, IonLabel, IonItem, IonInput, IonContent, IonButton, TranslateModule],
 })
 export class PasswordLostComponent {
   private router = inject(Router);

@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet, IonHeader, IonToolbar, IonButtons, IonButton, IonItem, IonInput, IonContent } from '@ionic/angular/standalone';
+import { Component, inject, OnInit } from '@angular/core';
+import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   standalone: true,
-  imports: [IonContent, IonInput, IonItem, IonButton, IonButtons, IonToolbar, IonHeader, IonApp, IonRouterOutlet],
+  imports: [IonApp, IonRouterOutlet],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  private translate = inject(TranslateService);
   constructor() {}
+  ngOnInit(): void {
+    this.translate.use('fr_FR');
+    this.translate.setDefaultLang('fr_FR');
+  }
 }

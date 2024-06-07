@@ -1,0 +1,14 @@
+<div class="categories">
+  <div class="header">
+    <h2>Music Genres</h2>
+    <a href="#">See All</a>
+  </div>
+  <div class="buttons">
+    <button 
+      *ngFor="let category of categories" 
+      (click)="selectCategory(category)"
+      [class.active]="category === selectedCategory">
+      {{ category }}
+    </button>
+  </div>
+</div>

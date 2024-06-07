@@ -1,1 +1,5 @@
-export enum EAuthPage { 'Login', 'Register'}
+export enum EAuthPage {
+    Login,
+    Register,
+  }
+  

@@ -1,4 +1,4 @@
-import { ExploreContainerComponent } from './../../explore-container/explore-container.component';
+import { ExploreContainerComponent } from 'src/app/pages/explore-container/explore-container.component';
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 
