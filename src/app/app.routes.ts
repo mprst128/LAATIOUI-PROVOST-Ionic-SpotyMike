@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { tabroutes } from './layouts/tabs/tabs.routes';
+
 
 export const routes: Routes = [
   {
@@ -19,14 +21,22 @@ export const routes: Routes = [
       },
     ],
   },
+  ...tabroutes,
   {
-    path: 'home',
-    loadComponent: () =>
-      import('./shared/tabs/tabs.page').then((m) => m.TabsPage),
+    path: 'profile',
+    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
+  },
+
+  ...tabroutes,
+  {
+    path: 'profile',
+    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
   },
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'auth/login',
-  },
+    path: 'search',
+    loadComponent: () => import('./pages/search/search.page').then( m => m.SearchPage)
+  }
+
+
+
 ];
