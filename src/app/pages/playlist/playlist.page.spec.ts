@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import {  PlaylistPage } from './playlist.page';
 
-describe('Tab3Page', () => {
+describe('playlist', () => {
   let component: PlaylistPage;
   let fixture: ComponentFixture<PlaylistPage>;
 

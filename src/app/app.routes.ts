@@ -1,11 +1,11 @@
-
 import { Routes } from '@angular/router';
-//import { tabroutes } from './layouts/tabs/tabs.routes';
+import { tabroutes } from './layouts/tabs/tabs.routes';
  
  
 export const routes: Routes = [
+ 
   {
-    // Delete
+  
     path: 'auth',
     loadComponent: () =>
       import('./layouts/auth/auth.page').then((m) => m.AuthPage),
@@ -15,20 +15,25 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./pages/login/login.page').then((m) => m.LoginPage),
       },
-      {
+      /*{
+        path: 'playlist',
+        loadComponent: () =>
+          import('./pages/playlist/playlist.page').then((m) => m.PlaylistPage),
+      },*/
+      /*{
         path: 'register',
         loadComponent: () =>
           import('./pages/register/register.page').then((m) => m.RegisterPage),
-      },
+      },*/
     ],
   },
-  //...tabroutes,
+  ...tabroutes,
   {
     path: 'profile',
     loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
   },
  
-  //...tabroutes,
+  ...tabroutes,
   {
     path: 'profile',
     loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)

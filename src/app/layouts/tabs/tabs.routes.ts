@@ -1,8 +1,7 @@
-import { Tab3Page } from './../../pages/tab3/tab3.page';
 import { Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
-
-export const routes: Routes = [
+ 
+export const tabroutes: Routes = [
   {
     path: 'home',
     component: TabsPage,
@@ -13,20 +12,17 @@ export const routes: Routes = [
           import('../../pages/home/home.page').then((m) => m.HomePage),
       },
       {
-        path: 'like',
+        path: 'tab2',
         loadComponent: () =>
           import('../../pages/tab2/tab2.page').then((m) => m.Tab2Page),
       },
+
       {
         path: 'playlist',
         loadComponent: () =>
-          import('../../pages/tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../../pages/playlist/playlist.page').then((m) => m.PlaylistPage),
       },
-      {
-        path: 'profile',
-        loadComponent: () =>
-          import('../../pages/tab3/tab3.page').then((m) => m.Tab3Page),
-      },
+     
       {
         path: 'profile',
         loadComponent: () =>
@@ -38,10 +34,5 @@ export const routes: Routes = [
         pathMatch: 'full',
       },
     ],
-  },
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full',
   },
 ];
