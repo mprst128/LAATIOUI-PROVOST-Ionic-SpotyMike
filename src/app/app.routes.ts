@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-<<<<<<< HEAD
 import { tabroutes } from './layouts/tabs/tabs.routes';
  
  
@@ -48,36 +47,3 @@ export const routes: Routes = [
 
 
 ];
-=======
-
-export const routes: Routes = [
-  {
-    path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'auth',
-    loadComponent: () => import('./layouts/auth.page/auth.page').then( m => m.AuthPage)
-  },
-
-  {
-    path: 'login',
-    loadComponent: () => import('./layouts/auth.page/auth.page').then( m => m.AuthPage),
-    resolve:{
-      component: AuthService.getPageAuth(),
-    }
-  },
-  {
-    path: 'register',
-    loadComponent: () => import('./layouts/auth.page/auth.page').then( m => m.AuthPage),
-    resolve:{
-      component: EAuthPage.Register,
-    }
-  }
-];
->>>>>>> 108c280 (first commit)

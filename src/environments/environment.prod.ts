@@ -1,5 +1,4 @@
 export const environment = {
-<<<<<<< HEAD
   production: true,
   url_api: 'http://esiea-spotymike.eu-4.evennode.com',
   firebase:{
@@ -11,7 +10,3 @@ export const environment = {
     appId: "1:343661246620:web:06808ff4b241c862a7d559"
   }
 };
-=======
-  production: true
-};
->>>>>>> 108c280 (first commit)
