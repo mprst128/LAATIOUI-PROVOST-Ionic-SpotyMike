@@ -28,7 +28,19 @@ export const tabroutes: Routes = [
         loadComponent: () =>
           import('../../pages/playerSong/playerSong.page').then((m) => m.PlayerSongPage),
       },
+
+      {
+        path: 'playerSong/:id',
+        loadComponent: () =>
+          import('../../pages/playerSong/playerSong.page').then((m) => m.PlayerSongPage),
+      },
      
+      {
+        path: 'listMusic',
+        loadComponent: () =>
+          import('../../pages/listMusic/listMusic.page').then((m) => m.ListMusicPage),
+      },
+
       {
         path: 'profile',
         loadComponent: () =>

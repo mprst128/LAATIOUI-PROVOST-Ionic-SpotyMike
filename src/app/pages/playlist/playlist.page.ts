@@ -5,7 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonRow, IonCol, IonIcon, I
 import { Location } from '@angular/common';
 import { addIcons } from 'ionicons';
 import { chevronBack, ellipsisHorizontal } from 'ionicons/icons';
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-playlist',
@@ -29,5 +29,10 @@ export class PlaylistPage implements OnInit {
   backClicked() {
     this._location.back();
   }
+
+ goToSong() {
+  console.log('goToSong');
+  this.router.navigate(['home/playerSong/123']);
+ }
 
 }
