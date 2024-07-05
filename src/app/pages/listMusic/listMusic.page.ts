@@ -30,4 +30,23 @@ export class ListMusicPage implements OnInit {
     this._location.back();
   }
 
+  goToSong() {
+    console.log('goToSong');
+    this.router.navigate(['home/playerSong/123']);
+   }
+
+   goToPlaylist() {
+    console.log('goToPlaylist');
+    this.router.navigate(['home/playlist']);
+   }
+
+   goToArtist() {
+    console.log('goToArtist');
+    this.router.navigate(['home/artist']);
+   }
+
+   goToFavorites() {
+    console.log('goToFavorites');
+    this.router.navigate(['home/favorites']);
+   }
 }

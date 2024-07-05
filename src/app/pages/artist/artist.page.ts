@@ -8,13 +8,13 @@ import { chevronBack, ellipsisHorizontal } from 'ionicons/icons';
 import { Router} from '@angular/router';
 
 @Component({
-  selector: 'app-playlist',
-  templateUrl: './playlist.page.html',
-  styleUrls: ['./playlist.page.scss'],
+  selector: 'app-artist',
+  templateUrl: './artist.page.html',
+  styleUrls: ['./artist.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonIcon, IonButton, IonTitle, IonCol, IonRow, IonToolbar, CommonModule, FormsModule]
 })
-export class PlaylistPage implements OnInit {
+export class ArtistPage implements OnInit {
 
   constructor(private _location: Location, private router: Router) {
     addIcons({ chevronBack, ellipsisHorizontal })
@@ -30,9 +30,9 @@ export class PlaylistPage implements OnInit {
     this._location.back();
   }
 
- goToSong() {
-  console.log('goToSong');
-  this.router.navigate(['home/playerSong/123']);
+ goToOneArtist() {
+  console.log('goToOneArtist');
+  this.router.navigate(['home/oneArtist']);
  }
 
  goToFavorites() {

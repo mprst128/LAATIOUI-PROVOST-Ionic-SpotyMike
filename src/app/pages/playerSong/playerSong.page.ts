@@ -45,6 +45,7 @@ import { Location } from '@angular/common';
 })
 export class PlayerSongPage implements OnInit {
   public progress = 0;
+  router: any;
 
   constructor(private _location: Location) {
     addIcons({ chevronBack });
@@ -54,10 +55,16 @@ export class PlayerSongPage implements OnInit {
       this.progress += 1;
     }, 50);
   }
-
+  goToFavorites() {
+    console.log('goToFavorites');
+    this.router.navigate(['home/favorites']);
+   }
+   
   ngOnInit() {}
 
   backClicked() {
     this._location.back();
   }
+
+
 }

@@ -1,23 +1,21 @@
 <ion-content [fullscreen]="true">
   <ion-row class="container">
-    <ion-icon (click)="backClicked()" class="iconHeader" name="chevronBack"></ion-icon>
-    <p id="title">Favorites</p>
+    <ion-icon (click)="backClicked()" class="iconHeader" name="chevronBack" color="black"></ion-icon>
+    <p id="title">Artist List</p>
     <ion-icon class="iconHeader" name="ellipsis-horizontal"></ion-icon>
   </ion-row>
 <div>
   <div class="padding-container">
       <div>
-        <ion-row (click)="goToSong()">
-          <img class="reformat-cover" src="assets/icon/Playlist/ppWorkInstrumental.png" alt="Cover Work Instrument">
+        <ion-row (click)="goToOneArtist()" >
+          <img class="reformat-cover" src="assets/icon/theweeknd1.png" alt="The Weeknd">
           <div class="padding-text">
-            <p class="bold playlist-text">Work Instrument</p>
-            <p class="light auteur-text">Nama User</p>
-            <p class="light nb-song-text">20 songs</p>
+            <p class="bold playlist-text">The Weeknd</p>
           </div>
             <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
             <ion-col class="buttons-likeandshare">
               <a class="btn-like" color="transparent" href="">
-                <img class="reformat-like" src="assets/icon/likeSomething.svg">
+                <img (click)="goToFavorites()" class="reformat-like" src="assets/icon/likeSomething.svg">
               </a>
               <a class="btn-share" color="transparent" href="">
                 <img class="reformat-share" src="assets/icon/shareSomething.svg">
@@ -33,11 +31,9 @@
   <div class="padding-container">
     <div>
       <ion-row>
-        <img class="reformat-cover" src="assets/icon/Playlist/ppChillVibes.png" alt="Cover Chill Vibes">
+        <img class="reformat-cover" src="assets/icon/olivia.png" alt="Olivia Rorigo">
         <div class="padding-text">
-          <p class="bold playlist-text">Chill Vibes</p>
-          <p class="light auteur-text">Randy Stanton</p>
-          <p class="light nb-song-text">50 songs</p>
+          <p class="bold playlist-text">Olivia Rodrigo</p>
         </div>
           <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
           <ion-col class="buttons-likeandshare">
@@ -58,11 +54,9 @@
   <div class="padding-container">
     <div>
       <ion-row>
-        <img class="reformat-cover" src="assets/icon/Playlist/ppDancePartyHits.png" alt="Cover Dance Party Hits">
+        <img class="reformat-cover" src="assets/icon/vald.png" alt="Vald">
         <div class="padding-text">
-          <p class="bold playlist-text">Dance Party Hits</p>
-          <p class="light auteur-text">Jaydon Curtis</p>
-          <p class="light nb-song-text">55 songs</p>
+          <p class="bold playlist-text">Vald</p>
         </div>
           <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
           <ion-col class="buttons-likeandshare">
@@ -83,11 +77,9 @@
   <div class="padding-container">
     <div>
       <ion-row>
-        <img class="reformat-cover" src="assets/icon/Playlist/ppSummerBreezes1.png" alt="Cover Summer Breezes 1">
+        <img class="reformat-cover" src="assets/icon/ariana.png" alt="Ariana Grande">
         <div class="padding-text">
-          <p class="bold playlist-text">Summer Breezes</p>
-          <p class="light auteur-text">Angel Herwitz</p>
-          <p class="light nb-song-text">30 songs</p>
+          <p class="bold playlist-text">Ariana Grande</p>
         </div>
           <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
           <ion-col class="buttons-likeandshare">
@@ -108,11 +100,9 @@
   <div class="padding-container">
     <div>
       <ion-row>
-        <img class="reformat-cover" src="assets/icon/Playlist/ppSummerBreezes2.png" alt="Cover Summer Breezes 2">
+        <img class="reformat-cover" src="assets/icon/sam.png" alt="Sam Smith">
         <div class="padding-text">
-          <p class="bold playlist-text">Summer Breezes</p>
-          <p class="light auteur-text">Angel Herwitz</p>
-          <p class="light nb-song-text">30 songs</p>
+          <p class="bold playlist-text">Sam Smith</p>
         </div>
           <ion-icon class="ellipsis" name="ellipsis-horizontal"></ion-icon>
           <ion-col class="buttons-likeandshare">

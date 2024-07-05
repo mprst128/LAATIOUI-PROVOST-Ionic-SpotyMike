@@ -30,4 +30,9 @@ export class ProfilePage implements OnInit {
     this._location.back();
   }
 
+  goToSong() {
+    console.log('goToSong');
+    this.router.navigate(['home/playerSong/123']);
+   }
+
 }

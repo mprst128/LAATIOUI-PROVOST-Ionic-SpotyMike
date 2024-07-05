@@ -8,13 +8,13 @@ import { chevronBack, ellipsisHorizontal } from 'ionicons/icons';
 import { Router} from '@angular/router';
 
 @Component({
-  selector: 'app-playlist',
-  templateUrl: './playlist.page.html',
-  styleUrls: ['./playlist.page.scss'],
+  selector: 'app-inscription',
+  templateUrl: './inscription.page.html',
+  styleUrls: ['./inscription.page.scss'],
   standalone: true,
   imports: [IonContent, IonHeader, IonIcon, IonButton, IonTitle, IonCol, IonRow, IonToolbar, CommonModule, FormsModule]
 })
-export class PlaylistPage implements OnInit {
+export class InscriptionPage implements OnInit {
 
   constructor(private _location: Location, private router: Router) {
     addIcons({ chevronBack, ellipsisHorizontal })

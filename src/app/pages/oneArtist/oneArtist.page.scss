@@ -31,11 +31,12 @@
     position: absolute;
     padding-left: 65%;
     padding-top: 20%;
+    margin-bottom: 30px;
 }
 
 .ellipsis {
     position: absolute;
-    padding-left: 82%;
+    padding-left: 95%;
     transform: rotate(90deg) translateY(-160px) translateX(-155px);
 }
   
@@ -59,12 +60,12 @@
     position: absolute;
     padding-left: 10%;
     margin-bottom: -10px;
-    width: 40%;
+    width: 30%;
 }
 
 .padding-text {
     padding-left: 45%;
-    padding-bottom: 15%;
+    padding-bottom: 10%;
 }
 
 .playlist-text {
@@ -72,19 +73,9 @@
     font-size: 110%;
 }
 
-.auteur-text {
-    margin : 0%;
-    padding-left: 1%;
-    font-size: 90%;
-}
-
-.nb-song-text {
-    padding-left: 1%;
-    font-size: 80%;
-}
-
 
 .line {
+    margin-top: 15px;
     padding-top: 1%;
     width: 100%;
     border-bottom: 1px solid #EBEBEB;

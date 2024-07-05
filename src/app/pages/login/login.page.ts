@@ -101,4 +101,9 @@ export class LoginPage implements OnInit {
     });
     await modal.present();
   }
+
+  goToHome() {
+    console.log('goToHome');
+    this.router.navigate(['home/home.pages']);
+   }
 }

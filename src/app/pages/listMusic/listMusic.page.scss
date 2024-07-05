@@ -1,0 +1,105 @@
+ion-content {
+    --background: rgb(83, 113, 105);
+    --background: linear-gradient(180deg, rgba(83, 113, 105, 1) 0%, rgba(255, 255, 255, 1) 50%);
+    background-attachment: fixed;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7%;
+  
+    #title{
+      font-size: 16px;
+      color: black;
+      font-family: 'Manrope', sans-serif;
+      font-weight: bold;
+      letter-spacing: 0.01em;
+      font-style: normal;
+    }
+    .iconHeader {
+      font-size: 6vw;
+      color: black;
+    }
+  }
+
+  .padding-title {
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.button{
+    margin-bottom: 20px;
+    margin-right: 10px;
+    --color: white;
+      --background: #15AB90;
+    }
+
+.padding-top {
+    padding-top: 3%;
+}
+
+.buttons-likeandshare {
+    position: absolute;
+    padding-left: 65%;
+    margin-top: -30px;
+}
+
+.ellipsis {
+    position: absolute;
+    padding-left: 82%;
+    transform: rotate(90deg) translateY(-160px) translateX(-155px);
+}
+  
+.btn-like {
+    margin: 80px;
+}
+
+.btn-share {
+    margin-left: 80px;
+    width: 10%;
+}
+
+.reformat-like {
+    padding-right: 10%;
+}
+
+.reformat-share {
+    padding-right: 10%;
+}
+
+.reformat-cover {
+    position: absolute;
+    padding-left: 10%;
+    margin-bottom: -10px;
+    width: 30%;
+}
+
+.padding-text {
+    padding-left: 45%;
+    padding-bottom: 5%;
+}
+
+.playlist-text {
+    margin-right: -200px;
+    font-size: 110%;
+}
+
+.auteur-text {
+    margin : 0%;
+    padding-left: 0%;
+    font-size: 90%;
+}
+
+.nb-song-text {
+    padding-left: 1%;
+    font-size: 80%;
+}
+
+
+.line {
+    padding-top: 1%;
+    width: 100%;
+    border-bottom: 1px solid #EBEBEB;
+}

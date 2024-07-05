@@ -5,7 +5,7 @@ export const tabroutes: Routes = [
   {
     path: 'home',
     component: TabsPage,
-    children: [
+    children: [   
       {
         path: 'home',
         loadComponent: () =>
@@ -46,6 +46,31 @@ export const tabroutes: Routes = [
         loadComponent: () =>
           import('../../pages/profile/profile.page').then((m) => m.ProfilePage),
       },
+
+      {
+        path: 'album',
+        loadComponent: () =>
+          import('../../pages/album/album.page').then((m) => m.AlbumPage),
+      },
+
+      {
+        path: 'artist',
+        loadComponent: () =>
+          import('../../pages/artist/artist.page').then((m) => m.ArtistPage),
+      },
+
+      {
+        path: 'inscription',
+        loadComponent: () =>
+          import('../../pages/inscription/inscription.page').then((m) => m.InscriptionPage),
+      },
+
+      {
+        path: 'oneArtist',
+        loadComponent: () =>
+          import('../../pages/oneArtist/oneArtist.page').then((m) => m.OneArtistPage),
+      },
+
       {
         path: '',
         redirectTo: '/home/home',
